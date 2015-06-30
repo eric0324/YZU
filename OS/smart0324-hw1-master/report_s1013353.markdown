@@ -1,0 +1,7 @@
+Hw1 : Make a call directly
+===================
+This program demonstrates invocation of the mkdir system call (136) using the syscall function.
+ 
+ ![enter image description here](https://github.com/YZU-CSE-CS305-Intro-to-OS/smart0324-hw1/blob/master/hw1_demo.png?raw=true)
+
+then, we can make direction.

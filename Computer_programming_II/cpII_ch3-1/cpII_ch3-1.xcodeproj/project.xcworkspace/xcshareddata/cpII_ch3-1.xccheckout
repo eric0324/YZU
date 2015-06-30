@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>25E57B07-89D1-4A46-86C9-1F7841943B56</string>
+	<key>IDESourceControlProjectName</key>
+	<string>cpII_ch3-1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>33982AD6213A45F48BFD334D26535BBED42B6054</key>
+		<string>https://github.com/smart0324/yzu.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>computer_programming_II/cpII_ch3-1/cpII_ch3-1.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>33982AD6213A45F48BFD334D26535BBED42B6054</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/smart0324/yzu.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>33982AD6213A45F48BFD334D26535BBED42B6054</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>33982AD6213A45F48BFD334D26535BBED42B6054</string>
+			<key>IDESourceControlWCCName</key>
+			<string>yzu</string>
+		</dict>
+	</array>
+</dict>
+</plist>
