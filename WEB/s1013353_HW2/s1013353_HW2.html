@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>點餐網頁</title>
+
+  </head>
+  <!--  CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- 佈景主題 -->
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+  <!-- JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- 讓金額變紅色 -->
+  <style type="text/css">
+  .dollor{
+    color: red;
+  }
+  </style>
+
+  </style>
+  <body>
+
+    <!-- 讓使用者可以選擇內用和外送 -->
+    <script language="JavaScript" type="text/javascript">
+      function showhidediv(rad){
+      var rads=document.getElementsByName(rad.name);
+      document.getElementById('out').style.display=(rads[0].checked)?'block':'none' ;
+      document.getElementById('in').style.display=(rads[1].checked)?'block':'none' ;
+      }
+    </script>
+
+    </script>
+
+    <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">EricWu 的歡樂點餐網</a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+
+<form action="s1013353_HW2.php" method="post">
+  <table>
+  <tr>
+    <td>
+      <table class="">
+        <tr>
+          <td>
+            <div class="form-group"
+              <label>
+              姓名 <br>
+              <input name = "name" type = "text" size = "25" min="5" max="20"  placeholder="大吳" required><br>
+              </label>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="form-group"
+              <label>
+              手機 <br>
+              <input name = "phone" type = "phone" size = "25" min="5"  placeholder="####-###-###" pattern = "\d{4}-\d{3}-\d{3}" required><br>
+              </label>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="form-group"
+              <label>
+              電子郵件 <br>
+              <input name = "mail" type = "email" size = "40" min="5" pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="foodme@gmail.com" required><br>
+              </label>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </td>
+    <td>
+      <!-- 廣告區 -->
+      <td><p style="margin-left: 300px"><img src="img/ad.jpg"></div></td>
+    </td>
+  </tr>
+
+  </table>
+
+    <!-- 用餐方式選擇 -->
+    <p><strong>你要內用還外帶？</strong><br>
+    <label>
+    <input name="want" type = "radio" value = "外送" onclick="showhidediv(this);" checked="true">外帶</label>
+    <label>
+    <input name="want" type = "radio" value = "內用" onclick="showhidediv(this);">內用</label></p>
+
+    <!-- 外送情況 -->
+    <div id="out">
+    <p>
+      *外送服務為限區服務：實際付款金額滿$300元，外送服務一律免費；</br>
+        實際付款金額未滿$300元，酌收外送服務費$35元。</br>
+        <div>
+        <select name = "city_out"  class="form-control input-sm">
+          <option></option>
+          <option>台北市</option>
+          <option>基隆市</option>
+          <option>新北市</option>
+          <option>宜蘭縣</option>
+          <option>新竹市</option>
+          <option>新竹縣</option>
+          <option>桃園市</option>
+          <option>苗栗縣</option>
+          <option>台中市</option>
+          <option>彰化縣</option>
+          <option>南投縣</option>
+          <option>嘉義市</option>
+          <option>嘉義縣</option>
+          <option>雲林縣</option>
+          <option>台南市</option>
+          <option>高雄市</option>
+          <option>屏東縣</option>
+          <option>台東縣</option>
+          <option>花蓮縣</option>
+        </select>
+
+      <div class="form-group">
+      街道名稱
+      <input name = "road" type = "text" size = "70" placeholder="請輸入街道名稱">
+    </div>
+    </p>
+
+    </div>
+  </div>
+
+    <!-- 內用的情況 -->
+    <div id="in" style="display:none;">
+      <p>
+        <label>選擇你要去的門市
+          <select name = "city_in">
+            <option></option>
+            <option>台北店</option>
+            <option>基隆店</option>
+            <option>新北店</option>
+            <option>宜蘭店</option>
+            <option>新竹店</option>
+            <option>新竹店</option>
+            <option>桃園店</option>
+            <option>苗栗店</option>
+            <option>台中店</option>
+            <option>彰化店</option>
+            <option>南投店</option>
+            <option>嘉義店</option>
+            <option>嘉義店</option>
+            <option>雲林店</option>
+            <option>台南店</option>
+            <option>高雄店</option>
+            <option>屏東店</option>
+            <option>台東店</option>
+            <option>花蓮店</option>
+          </select>
+        </label>
+      </p>
+    </div>
+
+    <p> <label>取餐時間:
+      <input name="date" type = "datetime-local" />
+    </label> </p>
+
+    <p>
+      <strong>請選擇一個大披薩</strong><br>
+      <table class="table table-hover">
+        <tr>
+          <td>
+
+            <img src="img/1.jpg"/></br>
+            <label class="dollor">$ 430</label></br>
+            <label><input name = "pizza" type = "radio" value = "海陸" checked>海陸<label>
+          </td>
+          <td>
+            <img src="img/2.jpg"/></br>
+            <label class="dollor">$ 430</label></br>
+            <label><input name = "pizza" type = "radio" value = "法式蝦蟹鮑魚菇">法式蝦蟹鮑魚菇<label>
+          </td>
+          <td>
+            <img src="img/3.jpg"/></br>
+            <label class="dollor">$ 430</label></br>
+            <label><input name = "pizza" type = "radio" value = "皇朝海龍宴">皇朝海龍宴<label>
+          </td>
+          <td>
+            <img src="img/4.jpg"/></br>
+            <label class="dollor">$ 430</label></br>
+            <label><input name = "pizza" type = "radio" value = "炙燒松板">炙燒松板<label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <img src="img/5.jpg"/></br>
+            <label class="dollor">$ 530</label></br>
+            <label><input name = "pizza" type = "radio" value = "和風章魚燒">和風章魚燒<label>
+          </td>
+          <td>
+            <img src="img/6.jpg"/></br>
+            <label class="dollor">$ 530</label></br>
+            <label><input name = "pizza" type = "radio" value = "海鮮">海鮮<label>
+          </td>
+          <td>
+            <img src="img/7.jpg"/></br>
+            <label class="dollor">$ 530</label></br>
+            <label><input name = "pizza" type = "radio" value = "黃金和風雞">黃金和風雞<label>
+          </td>
+          <td>
+            <img src="img/8.jpg"/></br>
+            <label class="dollor">$ 530</label></br>
+            <label><input name = "pizza" type = "radio" value = "海陸大亨">海陸大亨<label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <img src="img/9.jpg"/></br>
+            <label class="dollor">$ 630</label></br>
+            <label><input name = "pizza" type = "radio" value = "鐵板牛柳">鐵板牛柳<label>
+          </td>
+          <td>
+            <img src="img/10.jpg"/></br>
+            <label class="dollor">$ 630</label></br>
+            <label><input name = "pizza" type = "radio" value = "韓式泡菜燒肉">韓式泡菜燒肉<label>
+          </td>
+          <td>
+            <img src="img/11.jpg"/></br>
+            <label class="dollor">$ 630</label></br>
+            <label><input name = "pizza" type = "radio" value = "六小福">六小福<label>
+          </td>
+          <td>
+            <img src="img/12.jpg"/></br>
+            <label class="dollor">$ 630</label></br>
+            <label><input name = "pizza" type = "radio" value = "夏威夷">夏威夷<label>
+          </td>
+        </tr>
+      </table>
+    </p>
+
+    <p>
+      <strong>請選擇一份好禮</strong><br>
+      <table class="table table-hover">
+        <tr>
+          <td>
+
+            <img src="img/cola.jpg"/></br>
+            <label class="dollor">$ 20</label></br>
+            <label><input name = "golf[]" type = "checkbox" value = "可樂" checked>可樂<label>
+          </td>
+          <td>
+            <img src="img/sprite.jpg"/></br>
+            <label class="dollor">$ 20</label></br>
+            <label><input name = "golf[]" type = "checkbox" value = "雪碧">雪碧<label>
+          </td>
+          <td>
+            <img src="img/soup.jpg"/></br>
+            <label class="dollor">$ 30</label></br>
+            <label><input name = "golf[]" type = "checkbox" value = "濃湯">濃湯<label>
+          </td>
+        </tr>
+      </table>
+    </p>
+
+    <p>
+      <input class="btn btn-default" type = "submit" value = "結帳" />
+    </p>
+  </form>
+
+</div>
+  <footer class="container" style="margin-top :100px;">
+  <p class="text-center">
+    Copyright ©2015 Eric
+  </p>
+</footer>
+
+</body>
+</html>
